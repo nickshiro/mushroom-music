@@ -1,0 +1,29 @@
+{
+	"name": "mushroom-music",
+	"type": "commonjs",
+	"module": "index.ts",
+	"packageManager": "pnpm@10.11.1",
+	"private": true,
+	"scripts": {
+		"start": "tsc && node dist/index.js",
+		"format": "biome format --write"
+	},
+	"dependencies": {
+		"@discordjs/opus": "^0.10.0",
+		"@discordjs/voice": "^0.18.0",
+		"@distube/ytdl-core": "^4.16.11",
+		"@distube/ytpl": "^1.2.2",
+		"@distube/ytsr": "^2.0.4",
+		"@valkey/client": "^1.0.0",
+		"discord.js": "^14.19.3",
+		"opusscript": "^0.1.1",
+		"scrape-youtube": "^2.4.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.15.29"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}

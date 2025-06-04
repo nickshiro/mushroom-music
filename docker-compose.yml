@@ -1,0 +1,17 @@
+services:
+  valkey:
+    image: valkey/valkey:latest
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+  bot:
+    depends_on:
+      valkey:
+        condition: service_started
+    build: .
+    container_name: mushroom-music
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
